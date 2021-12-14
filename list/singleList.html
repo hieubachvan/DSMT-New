@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+    <script src="../jquery.js"></script>
+	<script src="../index.js"></script>
+	<script type = "application/javascript" src = "../js/AnimationManager.js"> </script>
+    <script type = "application/javascript" src = "../js/ObjectManager.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedObject.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedCircle.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedLine.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedRectangle.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedPointer.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedLabel.js"> </script>
+    <script type = "application/javascript" src = "../js/Algorithm.js"> </script>
+    <script type = "application/javascript" src = "../js/LinkedList.js"> </script>
+	<link rel="stylesheet" href="../css/index.css" />
+	<link rel="shortcut icon" href="../favicon.icon" />
+	<title>Single list</title>
+	<script>
+          var type=0;
+          var index;
+	</script>
+</head>
+<body onload="init();ini();">
+	<div class="mainSub">
+		<div class="header">
+			<img class="logo" src="../image/logo1.png" alt="logo" onclick="window.location.href='../index.html'" />
+			<div class="navList">
+			        <!-- <a href="linearList.html" class="nav" style="text-decoration:none;">Sequence table</a> -->
+			        <a href="singleList.html" class="nav selected" style="text-decoration:none;">Single list</a>
+			        <!-- <a href="stackList.html" class="nav" style="text-decoration:none;">Stack</a>
+			        <a href="queueList.html" class="nav"style="text-decoration:none;">queue</a>
+			        <a href="factorial.html" class="nav" style="text-decoration:none;">factorial</a>
+			        <a href="linkedQueue.html" class="nav" style="text-decoration:none;">Chain queue</a> -->
+			</div>
+		</div>
+		<div class="showBox" width="1000" height="500" style="overflow: scroll;">
+		   <canvas id="drawing" width="2000" height="1000">Canvas</canvas>
+		</div>
+		<div class="singleStartHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="singleStarts">
+			<p class="insert r1">insert</p>
+			<p class="delete r2">delete</p>
+		</div>
+		<div class="singleSerialNumber subT1"> 
+			<span>Position</span>
+			<input type="text" class="singleSerial"/>
+		</div>
+		<div class="singleInsertNumber subT1">
+			<span>Value</span>
+			<input type="text" class="singleInputNumber"/>
+		</div>
+		<div class="singleInsert subT1">
+			<p>Go</p>
+		</div>
+		
+		
+		<div class="singleDeleteNumber subT2">
+			<span>Position</span>
+			<input type="text" class="singleDelNumber"/>
+		</div>
+		<div class="singleDelete subT2">
+			<p>Go</p>
+		</div> 
+		<div class="stateHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="state">
+			<p></p>
+		</div>
+		<div class="singleList_addHead">
+			<p class="p1">Vertex vtx = new Vertex(v)</p>
+			<p class="p2">vtx.next = head</p>
+			<p class="p3">head = vtx</p>
+		</div>
+		<div class="singleList_addTail">
+			<p class="p1">Vertex vtx = new Vertex(v)</p>
+			<p class="p2">tail.next = vxt</p>
+			<p class="p3">tail = vtx</p>
+		</div>
+		<div class="singleList_add">
+			<p class="p1">for (k = 0; k < i-1; k++)<br/>
+				pre = pre.next</p>
+			<p class="p2">Vertex aft = pre.next<br/>
+				Vertex vtx = new Vertex(v)</p>
+			<p class="p3">vtx.next = aft<br/>
+				pre.next = vtx</p>
+		</div>
+		<div class="singleList_deleteHead">
+			<p class="p1"></p>
+			<p class="p2">temp = head<br/>
+				head = head.next
+			</p>
+			<p class="p3">delete temp</p>
+		</div>
+		<div class="singleList_deleteTail">
+			<p class="p1">while (temp.next != null)<br/>
+				pre = pre.next</p>
+			<p class="p2">if (pre.next = null)<br/>
+				delete temp, tail = pre
+			</p>
+			<p class="p3"></p>
+		</div>
+		<div class="singleList_delete">
+			<p class="p1">for (k = 0; k < i-1; k++)<br/>
+				pre = pre.next</p>
+			<p class="p2">Vertex del = pre.next, aft = del.next<br/>
+				pre.next = aft // bypass del
+			</p>
+			<p class="p3">delete del</p>
+		</div>
+		
+		
+		<!--div class="codeHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="codes">
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+	    </div-->
+	    <div class="controlBar">
+	    	<input type="range" name="controlSlider" id="controlSlider"  min="1" max="100" value="60" onchange="setAnimationSpeed(this.value);" />
+	    </div>
+	</div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256898616'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256898616' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

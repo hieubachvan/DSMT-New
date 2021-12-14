@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<script src="../jquery.js"></script>
+	<script src="../index.js"></script>
+	<script type = "application/javascript" src = "../js/AnimationManager.js"> </script>
+    <script type = "application/javascript" src = "../js/ObjectManager.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedObject.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedCircle.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedLine.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedRectangle.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedPointer.js"> </script>
+    <script type = "application/javascript" src = "../js/Algorithm.js"> </script>
+    <script type = "application/javascript" src = "../js/OrderList.js"> </script>
+	<link rel="stylesheet" href="../css/index.css" />
+	<link rel="stylesheet" type="text/css" href="../css/graph.css"/>
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<title>模式匹配</title>
+	<script>
+          var type=0;
+          var index;
+	</script>
+</head>
+<body onload="init();ini();">
+	<div class="mainSub">
+		<div class="header">
+			<img class="logo" src="../image/logo1.png" alt="logo" onclick="window.location.href='../index.html'" />
+			<div class="navList">
+			        <a href="patternMatch.html" class="nav" style="text-decoration:none;">模式匹配</a>
+			        <a href="string.html" class="nav" style="text-decoration:none;">查找</a>
+			</div>
+		</div>
+		<div class="showBox" width="1000" height="500" style="overflow: scroll;">
+		   <canvas id="drawing" width="2000" height="1000">Canvas</canvas>
+		</div>
+		<div class="primStartHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="primStarts">
+			<p class="r1">1</p>
+			<p class="r2">2</p>
+			<p class="r3">3</p>
+		</div>
+		<div class="peakPrimNum subX1">
+			<span>顶点数量</span>
+			<input type="text" class="peakPrimNumber"/>
+		</div>
+		<div class="createPrimGraph subX1">
+			<p>生成随机图</p>
+		</div>
+		<div class="startPrimPeak subX2"> 
+			<span>起点</span>
+			<input type="text" class="startPrimNumber"/>
+		</div>
+		<div class="endPrimPeak subX2">
+			<span>终点</span>
+			<input type="text" class="endPrimNumber"/>
+		</div>
+		<div class="weightPrim subX2">
+			<span>权重</span>
+			<input type="text" class="weightPrimNumber"/>
+		</div>
+		<div class="addPrimEdge subX2">
+			<p>添加边</p>
+		</div>
+        <div class="deletePrimEdge subX2">
+			<p>删除边</p>
+		</div>
+		<div class="runPrimPeak subX3">
+			<span>起始顶点</span>
+			<input type="text" class="runPrimNumber"/>
+		</div>
+		<div class="runTraverse subX3 Prim">
+			<p>Run Prim</p>
+		</div>
+		<div class="stateHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="state">
+			<p></p>
+		</div>
+		<!--div class="codeHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="codes">
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+	    </div-->
+	    <div class="controlBar">
+	    	<input type="range" name="controlSlider" id="controlSlider"  min="1" max="100" value="30" onchange="setAnimationSpeed(this.value);" />
+	    </div>
+	</div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256898616'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256898616' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

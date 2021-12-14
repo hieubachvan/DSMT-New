@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+	<script src="../jquery.js"></script>
+	<script src="../index.js"></script>
+	<script type = "application/javascript" src = "../js/AnimationManager.js"> </script>
+    <script type = "application/javascript" src = "../js/ObjectManager.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedObject.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedCircle.js"> </script>
+	<script type = "application/javascript" src = "../js/AnimatedHighlightCircle.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedLine.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedLabel.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedRectangle.js"> </script>
+    <script type = "application/javascript" src = "../js/AnimatedPointer.js"> </script>
+	<script type = "application/javascript" src = "../js/AnimatedHighlightRectangle.js"> </script>
+    <script type = "application/javascript" src = "../js/Algorithm.js"> </script>
+    <script type = "application/javascript" src = "../js/Floyd.js"> </script>
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="stylesheet" href="../css/index.css" />
+	<link rel="stylesheet" type="text/css" href="../css/graph.css"/>
+	<title>Floyd</title>
+	<script>
+          var type=0;
+          var index;
+	</script>
+</head>
+<body onload="init();ini();">
+	<div class="mainSub">
+		<div class="header">
+			<img class="logo" src="../image/logo1.png" alt="logo" onclick="window.location.href='../index.html'" />
+			<div class="navList">
+			        <a href="graphDFSTraverse.html" class="nav" style="text-decoration:none;">DFS traversal</a>
+			        <a href="graphBFSTraverse.html" class="nav" style="text-decoration:none;">BFS traversal</a>
+			        <a href="prim.html" class="nav" style="text-decoration:none;">Prim</a>
+			        <a href="kruskal.html" class="nav" style="text-decoration:none;">Kruskal</a>
+			        <a href="dijkstra.html" class="nav" style="text-decoration:none;">Dijkstra</a>
+			        <a href="floyd.html" class="nav selected" style="text-decoration:none;">Floyd</a>
+			</div>
+		</div>
+		<div class="showBox" width="1000" height="500" style="overflow: scroll;">
+		   <canvas id="drawing" width="2000" height="1000">Canvas</canvas>
+		</div>
+		<div class="dijStartHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="dijStarts">
+			<p class="r1">Generate random graph</p>
+			<p class="r2">Add and delete edges</p>
+			<p class="r3">Run Floyd</p>
+			<p class="r4">Options</p>
+		</div>
+		<div class="peakDijNum subX1">
+			<span>Number of vertices</span>
+			<input type="text" class="peakDijNumber"/>
+		</div>
+		<div class="createDijGraph subX1">
+			<p>Generate random graph</p>
+		</div>
+		<div class="startDijPeak subX2"> 
+			<span>starting point</span>
+			<input type="text" class="startDijNumber"/>
+		</div>
+		<div class="endDijPeak subX2">
+			<span>end</span>
+			<input type="text" class="endDijNumber"/>
+		</div>
+		<div class="weightDij subX2">
+			<span>Weights</span>
+			<input type="text" class="weightDijNumber"/>
+		</div>
+		<div class="addDijEdge subX2">
+			<p>Add edge</p>
+		</div>
+        <div class="deleteDijEdge subX2">
+			<p>Delete edge</p>
+		</div>
+		<!--div class="runDijPeak subX3">
+			<span></span>
+			<input type="text" class="runDijNumber"/>
+		</div-->
+		<div class="runTraverse subX3 Floyd">
+			<p>Run Floyd</p>
+		</div>
+		<div class="dirDijGraph subX4">
+		  <form>
+			<input type="radio" name="dir" class="radio1" value='1'><span>Directed graph</span>
+			<input type="radio" name="dir" class="radio2" value='0'><span>Undirected graph</span>
+		  </form>
+		</div>
+		<div class="stateHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="state">
+			<p></p>
+		</div>
+		<!--div class="codeHide">
+			<img src="../image/arrow_white_right.png" alt="" />
+		</div>
+		<div class="codes">
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+			<p>xx</p>
+	    </div-->
+	    <div class="controlBar">
+	    	<input type="range" name="controlSlider" id="controlSlider"  min="1" max="100" value="60" onchange="setAnimationSpeed(this.value);" />
+	    </div>
+	</div>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1256898616'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1256898616' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

@@ -1,0 +1,754 @@
+body {
+  width: 100%;
+  min-width: 750px;
+  margin: 0;
+}
+.main {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+  background: rgb(33 28 28);
+  overflow-x: hidden;
+}
+.mainSub {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑";
+  background: black;
+  overflow-x: hidden;
+}
+
+.singleList_add,
+.singleList_addHead,
+.singleList_addTail,
+.singleList_deleteHead,
+.singleList_deleteTail,
+.singleList_delete {
+  display: none;
+}
+
+.singleList_delete.active,
+.singleList_add.active,
+.singleList_addHead.active,
+.singleList_addTail.active,
+.singleList_deleteHead.active,
+.singleList_deleteTail.active {
+  display: block;
+  position: absolute;
+  left: calc(100% - 445px);
+  top: 72%;
+  text-align: left;
+  background-color: #8fbc8f;
+  padding: 10px;
+  width: 350px;
+}
+
+.singleList_delete.active .active,
+.singleList_add.active .active,
+.singleList_addHead.active .active,
+.singleList_addTail.active .active,
+.singleList_deleteTail.active .active,
+.singleList_deleteHead.active .active {
+  background: #2f4f4f;
+  color: white;
+  padding: 5px;
+}
+
+.header {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  background: black;
+  color: white;
+}
+.logo {
+  position: absolute;
+  top: 10px;
+  left: 8%;
+  cursor: pointer;
+  width: 160px;
+  height: 50px;
+}
+.logo-footer {
+  padding-top: 77px;
+  padding-right: 50px;
+}
+.logo-footer > img {
+  height: 257px;
+  border-radius: 4px;
+}
+.arithmetic {
+  /* position: relative; */
+  top: 60px;
+  width: 90%;
+  height: 500px;
+  /*	border:            1px solid red;*/
+  margin: 70px 0 0 70px;
+  display: flex;
+  justify-content: center;
+}
+.arithmeticList {
+  width: 15.5%;
+  height: 93%;
+  border: 8px solid white;
+  margin: 20px 0 0 40px;
+  float: left;
+  background: #a6c7e8;
+  border-radius: 10px;
+}
+
+.arithmeticList:hover {
+  background-color: #c9dbec;
+  box-shadow: 2px 3px 15px 5px rgba(255, 255, 255, 0.3);
+  width: 16.5%;
+}
+
+.pictureAndDes {
+  height: 44%;
+  /*border:            1px solid red;*/
+}
+/*.pictureAndDes a{
+	text-decoration:   none;
+}*/
+.picture {
+  width: 100%;
+  height: 80%;
+  cursor: pointer;
+}
+.description {
+  font-size: 1.3em;
+  color: white;
+  cursor: pointer;
+  padding-top: 20px;
+}
+.buttonList {
+  margin-top: 16px;
+}
+.btn {
+  /* width: 55%; */
+  height: 36px;
+  margin-top: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+  /* background-color: rgb(33 28 28); */
+}
+.treeBtn,
+.graphBtn,
+.lineBtn {
+  height: 36px;
+  margin-top: 10px;
+}
+.sortBtn {
+  /*width:             42%;
+	height:            35px;
+	padding-right:     20px;
+	margin-top:        20px;
+	margin-left:       4px;
+	margin-right:      4px;*/
+}
+.treeBtn,
+.lineBtn,
+.graphBtn {
+  /* width: 42%; */
+  height: 35px;
+  /*padding-right:     20px;*/
+  margin-top: 20px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+.navList {
+  position: relative;
+  top: 12px;
+  left: 400px;
+}
+.nav {
+  margin-right: 100px;
+  margin-top: 10px;
+  font-family: "微软雅黑";
+  font-weight: 550;
+  font-size: 1.3em;
+  text-decoration: none;
+  float: left;
+  color: rgb(136, 131, 131);
+  cursor: pointer;
+}
+a hover: {
+  color: rgb(136, 131, 131);
+}
+.selected {
+  color: white;
+}
+.showBox {
+  width: 93.9%;
+  height: 861px;
+  position: relative;
+  left: 40px;
+  top: 70px;
+  /*border:            1px solid red;*/
+  background: #d7cdcd;
+}
+.startHide {
+  width: 42px;
+  height: 105px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 495px;
+  cursor: pointer;
+}
+.linkedQueueStartHide {
+  width: 42px;
+  height: 70px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 83%;
+  cursor: pointer;
+}
+.startHide img {
+  position: relative;
+  top: 47px;
+}
+.linkedQueueStartHide img {
+  position: relative;
+  top: 27px;
+}
+.starts,
+.stackStarts,
+.queueStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 495px;
+  left: 46px;
+  width: 0px;
+  height: 105px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.linkedQueueStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 83%;
+  left: 46px;
+  width: 0px;
+  height: 70px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.starts p,
+.stackStarts p,
+.queueStarts p,
+.linkedQueueStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.length {
+  position: fixed;
+  left: 190px;
+  top: 495px;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.length span,
+.serialNumber span,
+.insertNumber span,
+.deleteNumber span,
+.stackInsertNumber span,
+.queueInsertNumber span,
+.linkedQueueInsertNumber span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.length input,
+.serialNumber input,
+.insertNumber input,
+.deleteNumber input,
+.stackInsertNumber input,
+.queueInsertNumber input,
+.linkedQueueInsertNumber input {
+  /*background:        rgb(89,229,89);*/
+  width: 72%;
+  margin-left: 6px;
+}
+.init {
+  position: fixed;
+  left: 394px;
+  top: 495px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.init p,
+.insertGo p,
+.deleteGo p,
+.insertStack p,
+.outStack p,
+.insertQueue p,
+.outQueue p,
+.insertLinkedQueue p,
+.outLinkedQueue p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.serialNumber,
+.stackInsertNumber,
+.queueInsertNumber,
+.linkedQueueInsertNumber {
+  position: fixed;
+  left: 244px;
+  top: 83%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.insertNumber {
+  position: fixed;
+  left: 394px;
+  top: 83%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.insertGo {
+  position: fixed;
+  left: 598px;
+  top: 83%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.deleteNumber {
+  position: fixed;
+  left: 190px;
+  top: 86.7%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.deleteGo {
+  position: fixed;
+  left: 394px;
+  top: 86.7%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.stateHide {
+  width: 42px;
+  height: 60px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 96.8%;
+  top: 65%;
+  cursor: pointer;
+}
+.stateHide img {
+  position: relative;
+  top: 20px;
+}
+.codeHide {
+  width: 42px;
+  height: 200px;
+  background: rgb(62, 62, 228);
+  position: fixed;
+  left: 96.8%;
+  top: 420px;
+  cursor: pointer;
+}
+.codeHide img {
+  position: relative;
+  top: 90px;
+  transform: rotate(180deg);
+}
+.state {
+  position: fixed;
+  top: 65%;
+  right: 47px;
+  /* height: 60px; */
+  min-height: 60px;
+  width: 350px;
+  background: #2f4f4f;
+  color: white;
+  font-size: 1em;
+  /* border-radius: 30px 0px 0px 30px; */
+  padding: 0 24px;
+}
+.state p {
+  height: 80%;
+  margin: 6px auto;
+}
+.codes {
+  position: fixed;
+  top: 420px;
+  right: 47px;
+  height: 200px;
+  background: rgb(62, 62, 228);
+  display: none;
+}
+.codes p {
+  color: white;
+  font-size: 1em;
+  padding-top: 6.1px;
+  margin: 0px;
+  padding-bottom: 6px;
+}
+.stackLength,
+.queueLength,
+.linkedQueueLength {
+  position: fixed;
+  left: 244px;
+  top: 495px;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.stackLength input,
+.queueLength input,
+.linkedQueueLength input {
+  width: 60%;
+  /* margin-left:       150px;
+	height:            70%;*/
+}
+.stackLength span,
+.queueLength span,
+.linkedQueueLength span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -5px;
+}
+.stackInit,
+.queueInit,
+.linkedQueueInit {
+  position: fixed;
+  left: 447px;
+  top: 495px;
+  width: 120px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.stackInit p,
+.queueInit p,
+.linkedQueueInit p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.insertStack,
+.insertQueue,
+.insertLinkedQueue {
+  position: fixed;
+  left: 447px;
+  top: 83%;
+  width: 80px;
+  /* height: 35px; */
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.insertStack p,
+.insertQueue p,
+.insertLinkedQueue p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.outStack,
+.outQueue,
+.outLinkedQueue {
+  position: fixed;
+  left: 244px;
+  top: 86.7%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.singleStartHide {
+  width: 42px;
+  height: 70px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 83%;
+  cursor: pointer;
+}
+.singleStartHide img {
+  position: relative;
+  top: 27px;
+}
+.singleStarts {
+  position: fixed;
+  top: 83%;
+  left: 46px;
+  width: 0px;
+  height: 70px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.singleStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.singleSerialNumber {
+  position: fixed;
+  left: 190px;
+  top: 83%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.singleSerialNumber span,
+.singleInsertNumber span,
+.singleDeleteNumber span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.singleSerialNumber input,
+.singleInsertNumber input,
+.singleDeleteNumber input {
+  width: 12%;
+  margin-left: 6px;
+}
+.singleInsertNumber {
+  position: fixed;
+  left: 394px;
+  top: 83%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.singleInsert {
+  position: fixed;
+  left: 598px;
+  top: 83%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.singleInsert p,
+.singleDelete p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.singleDeleteNumber {
+  position: fixed;
+  left: 190px;
+  top: 86.7%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.singleDelete {
+  position: fixed;
+  left: 394px;
+  top: 86.7%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.controlBar {
+  text-align: center;
+  width: 31%;
+  height: 30px;
+  position: absolute;
+  top: 94%;
+  left: 34.5%;
+}
+input[type="range"] {
+  /* -webkit-box-shadow: 0 1px 0 0px #424242, 0 1px 0 #060607 inset,
+    0px 2px 10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset,
+    0 0px 1px rgba(0, 0, 0, 0.6) inset; */
+  margin-top: 2px;
+  background-color: #777;
+  border-radius: 10px;
+  width: 100%;
+  /* -webkit-appearance: none; */
+  height: 14px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: default;
+  margin-top: 10px;
+  height: 10px;
+  width: 5px;
+  transform: translateY(-4px);
+  background: none repeat scroll 0 0 #ffffff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 -1px 1px black inset;
+}
+input {
+  outline: none;
+}
+
+/*阶乘部分css*/
+.factStartHide {
+  width: 42px;
+  height: 35px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 86.7%;
+  cursor: pointer;
+}
+.factStartHide img {
+  position: relative;
+  top: 10px;
+}
+.factStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 86.7%;
+  left: 46px;
+  width: 0px;
+  height: 35px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.factStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.factNum {
+  position: fixed;
+  left: 190px;
+  top: 86.7%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.factNum span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.factNum input {
+  width: 72%;
+  margin-left: 6px;
+}
+.factCal {
+  position: fixed;
+  left: 394px;
+  top: 86.7%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.factCal p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.toggle-info {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  left: 92%;
+}
+.more-info {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  left: 60%;
+  top: 40%;
+  display: none;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 400;
+  text-align: left;
+}
+.singleAddHead {
+  position: absolute;
+  left: 628px;
+  top: 83%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}

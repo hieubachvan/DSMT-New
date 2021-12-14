@@ -1,0 +1,160 @@
+@charset "utf-8";
+/* CSS Document */
+.sortStartHide {
+  min-width: 42px;
+  height: 70px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 80%;
+  cursor: pointer;
+}
+.sortStartHide img {
+  position: relative;
+  top: 27px;
+}
+.insertsort {
+  display: none;
+}
+.selectSort_ {
+  display: none;
+}
+.bubbleSort_,
+.quickSort_ {
+  display: none;
+}
+
+.bubbleSort_.active,
+.insertsort.active,
+.selectSort_.active,
+.quickSort_.active {
+  display: block;
+  position: absolute;
+  left: calc(100% - 444px);
+  top: 72%;
+  text-align: left;
+  background-color: #8fbc8f;
+  padding: 10px;
+  width: 350px;
+}
+
+.bubbleSort_.active .active,
+.insertsort.active .active,
+.selectSort_.active .active,
+.quickSort_.active .active {
+  background: #2f4f4f;
+  color: white;
+  padding: 5px;
+}
+.compareSortStarts,
+.radixSortStarts,
+.heapSortStarts {
+  position: fixed;
+  top: 80%;
+  left: 46px;
+  width: 0px;
+  height: 70px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.compareSortStarts p,
+.radixSortStarts p,
+.heapSortStarts p {
+  text-align: left;
+  color: white;
+  font-size: 0.9em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 10px;
+  font-weight: bold;
+}
+.arrayLength {
+  position: fixed;
+  left: 46px;
+  top: 88%;
+  width: 140px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.arrayLength span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.arrayLength input {
+  width: 30%;
+  margin-left: 6px;
+}
+.createArray,
+.createRadixArray,
+.createHeapArray {
+  position: fixed;
+  left: 45px;
+  top: 92.3%;
+  width: 140px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.createArray p,
+.createRadixArray p,
+.createHeapArray p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  padding: 0 10px;
+  text-align: left;
+}
+.subC2,
+.subV2,
+.subHS2 {
+  position: fixed;
+  top: 84%;
+  width: 80px;
+  /* height: 35px; */
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+  left: 190px;
+  border-radius: 4px;
+  width: 75px;
+}
+.subC2 p,
+.subV2 p,
+.subHS2 p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  /* text-align: center; */
+  text-align: left;
+  padding: 0 7px;
+}
+.insertSort,
+.radixSort {
+  left: 190px;
+}
+.selectSort {
+  left: 274px;
+}
+.bubbleSort {
+  left: 359px;
+}
+.shellSort {
+  left: 443px;
+}
+.quickSort {
+  left: 443px;
+}
+.mergeSort {
+  left: 611px;
+}

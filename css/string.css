@@ -1,0 +1,159 @@
+.patternStartHide,.searchStartHide{
+	width:             42px;
+	height:            105px;
+	background:        rgb(89, 229, 89);
+	position:          fixed;
+	left:              0px;
+	top:               495px;
+	cursor:            pointer;
+}
+.patternStartHide img,.searchStartHide img{
+	position:          relative;
+	top:               47px;
+}
+.patternStarts,.searchStarts{
+	position:          fixed;
+	top:               495px;
+	left:              46px;
+	width:             0px;
+	height:            105px;
+	background:        rgb(89, 229, 89);
+	cursor:            pointer; 
+	display:           none;
+}
+.patternStarts p,.searchStarts p{
+	text-align:        left;
+    color:             white;
+    font-size:         1em;
+    width:             100%;
+    padding-top:       8px;
+    padding-bottom:    6px;
+    margin:            0px;
+    text-indent:       1.5em;
+}
+.patternString,.searchArray{
+	position:          fixed;
+	top:               495px;
+	left:              190px;
+	width:             200px;
+	height:            35px;
+	background:        rgb(89, 229, 89);
+	display:           none;
+	cursor:            pointer; 
+}
+.patternString span,.targetString span,.searchArray span,.searchContent span{
+	font-size:         1em;
+	color:             white;
+	display:           inline-block;
+	margin-top:        5px;
+}
+.patternString input,.targetString input,.searchArray input,.searchContent input{
+	width:             72%;
+	margin-left:       6px;
+}
+.createPattern,.setSize{
+	position:          fixed;
+	left:              394px;
+	top:               495px;
+	width:             80px;
+	height:            35px;
+	background:        rgb(89,229,89);
+	display:           none;
+	cursor:            pointer; 
+}
+.createPattern p,.createTarget p,.setSize p,.createSearchArray p{
+	width:             100%;
+	margin-top:        8px;
+	color:             white;
+	font-size:         1em;
+	text-align:        center;
+}
+.targetString,.searchContent{
+	position:          fixed;
+	top:               530px;
+	left:              190px;
+	width:             200px;
+	height:            35px;
+	background:        rgb(89, 229, 89);
+	display:           none;
+	cursor:            pointer; 
+}
+.createTarget,.createSearchArray{
+	position:          fixed;
+	left:              394px;
+	top:               530px;
+	width:             80px;
+	height:            35px;
+	background:        rgb(89,229,89);
+	display:           none;
+	cursor:            pointer; 
+}
+.subW3{
+    position:          fixed;
+	top:               565px;
+	width:             80px;
+	height:            35px;
+	background:        rgb(89,229,89);
+	display:           none;
+	cursor:            pointer; 
+}
+.subW3 p{
+	width:             100%;
+	margin-top:        8px;
+	color:             white;
+	font-size:         1em;
+	text-align:        center;
+}
+.match{
+	left:              190px;
+}
+.matchStart{
+	left:              274px;
+}
+.searchOne{
+	position:          fixed;
+	top:               565px;
+	left:              190px;
+	width:             200px;
+	height:            35px;
+	background:        rgb(89, 229, 89);
+	display:           none;
+	cursor:            pointer; 
+}
+.searchOne span{
+	font-size:         1em;
+	color:             white;
+	display:           inline-block;
+	margin-top:        5px;
+}
+.searchOne input{
+	width:             72%;
+	margin-left:       6px;
+}
+.binarySearch{
+	position:          fixed;
+	top:               565px;
+	left:              394px;
+	width:             80px;
+	height:            35px;
+	background:        rgb(89,229,89);
+	display:           none;
+	cursor:            pointer;
+}
+.binarySearch p,.sequentialSearch p{
+	width:             100%;
+	margin-top:        8px;
+	color:             white;
+	font-size:         1em;
+	text-align:        center;
+}
+.sequentialSearch{
+	position:          fixed;
+	top:               565px;
+	left:              478px;
+	width:             80px;
+	height:            35px;
+	background:        rgb(89,229,89);
+	display:           none;
+	cursor:            pointer;
+}

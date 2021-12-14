@@ -1,0 +1,615 @@
+.treeStartHide {
+  width: 42px;
+  height: 35px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 85%;
+  cursor: pointer;
+}
+.treeStartHide img {
+  position: relative;
+  top: 10px;
+}
+.avlTreeStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 85%;
+  left: 46px;
+  width: 0px;
+  height: 35px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+
+.BST_delete,
+.BST_find,
+.BST_insert {
+  display: none;
+}
+
+.BST_delete.active,
+.BST_find.active,
+.BST_insert.active {
+  display: block;
+  position: absolute;
+  left: calc(100% - 444px);
+  top: 72%;
+  text-align: left;
+  background-color: #8fbc8f;
+  padding: 10px;
+  width: 350px;
+}
+
+.BST_delete.active .active,
+.BST_find.active .active,
+.BST_insert.active .active {
+  background: #2f4f4f;
+  color: white;
+  padding: 5px;
+}
+
+.avlTreeStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.avlInsert {
+  position: fixed;
+  left: 190px;
+  top: 85%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.avlInsert span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.avlInsert input {
+  width: 72%;
+  margin-left: 6px;
+}
+.avlAction {
+  position: fixed;
+  /*left:              166px;*/
+  left: 190px;
+  top: 85%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.avlAction p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.heapStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 85%;
+  left: 46px;
+  width: 0px;
+  height: 35px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.heapStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.heapNum {
+  position: fixed;
+  left: 190px;
+  top: 85%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.heapNum span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.heapNum input {
+  width: 72%;
+  margin-left: 6px;
+}
+.heapInsert {
+  position: fixed;
+  left: 166px;
+  top: 85%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.heapInsert p,
+.heapDelete p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.heapDelete {
+  position: fixed;
+  left: 251px;
+  top: 85%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.bstTreeStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 85%;
+  left: 46px;
+  width: 0px;
+  height: 35px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.bstTreeStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  /* text-indent: 1.5em; */
+}
+.bstTreeNum {
+  position: fixed;
+  left: 190px;
+  top: 85%;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.bstTreeNum span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.bstTreeNum input {
+  width: 50%;
+  margin-left: 6px;
+}
+.bstTreeInsert {
+  position: fixed;
+  left: 166px;
+  top: 89%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.bstTreeInsert p,
+.bstTreeDelete p,
+.bstTreeSearch p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.bstTreeDelete {
+  position: fixed;
+  left: 335px;
+  top: 89%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.bstTreeSearch {
+  position: fixed;
+  left: 251px;
+  top: 89%;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.treeBT2TStartHide {
+  width: 42px;
+  /*height:            175px;*/
+  height: 35px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  /*top:               425px;*/
+  top: 85%;
+  cursor: pointer;
+}
+.treeBT2TStartHide img {
+  position: relative;
+  /*top:               80px;*/
+  top: 10px;
+}
+.BT2TStarts {
+  position: fixed;
+  /*top:               425px;*/
+  top: 85%;
+  left: 46px;
+  width: 0px;
+  /*height:            175px;*/
+  height: 35px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.BT2TStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0 auto;
+  text-indent: 1.5em;
+}
+.T2BTAction {
+  position: fixed;
+  /*left:              166px;*/
+  left: 190px;
+  top: 85%;
+  width: 100px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.T2BTAction p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.BT2TAction {
+  position: fixed;
+  /*left:              166px;*/
+  left: 293px;
+  top: 85%;
+  width: 100px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.BT2TAction p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.transformMethod {
+  position: fixed;
+  top: 425px;
+  left: 190px;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.transformMethod select {
+  margin: 0 auto;
+  margin-top: 8px;
+  width: 160px;
+}
+.BT2TNode {
+  position: fixed;
+  top: 460px;
+  left: 190px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.BT2TNode span,
+.leftOrRight span,
+.childNode span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+}
+.BT2TNode input,
+.leftOrRight select {
+  width: 65%;
+}
+.leftOrRight {
+  position: fixed;
+  top: 460px;
+  left: 344px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.childNode {
+  position: fixed;
+  top: 460px;
+  left: 498px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.childNode input {
+  width: 45%;
+}
+.BCreateLine {
+  position: fixed;
+  left: 652px;
+  top: 460px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.BCreateLine p,
+.transformP p,
+.updateP p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.transformP {
+  position: fixed;
+  top: 495px;
+  left: 190px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.updateP {
+  position: fixed;
+  top: 530px;
+  left: 190px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.HuffmanStartHide {
+  width: 42px;
+  height: 70px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 530px;
+  cursor: pointer;
+}
+.HuffmanStartHide img {
+  position: relative;
+  top: 25px;
+}
+.HuffmanStarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 530px;
+  left: 46px;
+  width: 0px;
+  height: 70px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.HuffmanStarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.HuffmanInput {
+  position: fixed;
+  left: 190px;
+  top: 530px;
+  width: 200px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.HuffmanInput span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+  margin-left: -8px;
+}
+.HuffmanInput input {
+  width: 72%;
+  margin-left: 6px;
+}
+.createHuffman {
+  position: fixed;
+  left: 166px;
+  top: 530px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.createHuffman p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.ThrdBtreestartHide {
+  width: 42px;
+  height: 140px;
+  background: #2f4f4f;
+  position: fixed;
+  left: 0px;
+  top: 460px;
+  cursor: pointer;
+}
+.ThrdBtreestartHide img {
+  position: relative;
+  top: 60px;
+}
+.ThrdBtreestarts {
+  position: fixed;
+  /*border:            1px solid red;*/
+  top: 460px;
+  left: 46px;
+  width: 0px;
+  height: 140px;
+  background: #2f4f4f;
+  cursor: pointer;
+  display: none;
+}
+.ThrdBtreestarts p {
+  text-align: left;
+  color: white;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  margin: 0px;
+  text-indent: 1.5em;
+}
+.ThrdBtreeNode {
+  position: fixed;
+  top: 460px;
+  left: 190px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.ThrdBtreeNode span,
+.ThrdBtreeRight span,
+.ThrdBtreechildNode span {
+  font-size: 1em;
+  color: white;
+  display: inline-block;
+  margin-top: 5px;
+}
+.ThrdBtreeNode input,
+.ThrdBtreeRight select {
+  width: 65%;
+}
+.ThrdBtreeRight {
+  position: fixed;
+  top: 460px;
+  left: 344px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.ThrdBtreechildNode {
+  position: fixed;
+  top: 460px;
+  left: 498px;
+  width: 150px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.ThrdBtreechildNode input {
+  width: 45%;
+}
+.ThrdBtreeCreateLine {
+  position: fixed;
+  left: 652px;
+  top: 460px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.ThrdBtreeCreateLine p,
+.addThrd p,
+.ThrdUpdate p {
+  width: 100%;
+  margin-top: 8px;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+}
+.addThrd {
+  position: fixed;
+  top: 495px;
+  left: 190px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
+.ThrdUpdate {
+  position: fixed;
+  top: 530px;
+  left: 190px;
+  width: 80px;
+  height: 35px;
+  background: #2f4f4f;
+  display: none;
+  cursor: pointer;
+}
